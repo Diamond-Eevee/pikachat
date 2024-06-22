@@ -1,0 +1,14 @@
+<mat-sidenav-container class="main-container">
+    <mat-sidenav opened mode="side" class="channels-container">
+        UserName: <input [(ngModel)]="userName">
+        <app-channels></app-channels>
+    </mat-sidenav>
+    <mat-sidenav opened mode="side" position="end" class="toolbar-container">
+    </mat-sidenav>
+    <div class="messages-container">
+        <div class="messages" #messagesContainer>
+            <app-messages [messages]="messages"></app-messages>
+        </div>        
+        <send-message (messageEvent)="sendMessage($event)"></send-message>
+    </div>    
+</mat-sidenav-container>

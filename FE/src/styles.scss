@@ -1,0 +1,53 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$primary: mat.define-palette(mat.$indigo-palette);
+$accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$secondary: mat.define-palette(mat.$blue-palette);
+$grey-palette: mat.define-palette(mat.$grey-palette);
+$brown-palette: mat.define-palette(mat.$brown-palette);
+
+$light-theme: mat.define-light-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    secondary: $secondary,
+  ),
+  typography: mat.define-typography-config(),
+));
+
+$dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+    secondary: $secondary,
+  ),
+  typography: mat.define-typography-config(),
+));
+
+.light-theme {
+  @include mat.all-component-themes($light-theme);
+}
+
+.dark-theme {
+  @include mat.all-component-themes($dark-theme);
+}
+
+
+$lightThemeSecondaryColor: mat.get-color-from-palette(mat.$grey-palette, 50);
+$darkThemeSecondaryColor: mat.get-color-from-palette(mat.$grey-palette, 800);
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Helvetica Neue", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}

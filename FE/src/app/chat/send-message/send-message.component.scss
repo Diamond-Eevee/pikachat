@@ -1,0 +1,29 @@
+@use '../../../styles.scss' as *;
+
+@import '../../../variables.scss';
+
+.message-container {
+    padding: $medium-padding;
+}
+
+.message-input {
+    outline: 0;
+    border: 0;
+    width: 100%;    
+    padding: $medium-padding;
+    color: white;
+    border-radius: 5px;
+    font-size: 1.2em;
+}
+
+:host-context(.light-theme) {
+  .message-input {
+    background: $lightThemeSecondaryColor;
+  }
+}
+
+:host-context(.dark-theme)  {
+  .message-input {
+    background: $darkThemeSecondaryColor;
+  }
+}
