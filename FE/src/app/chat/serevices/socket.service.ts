@@ -16,7 +16,7 @@ export class SocketService {
             const hostname = window.location.hostname;
             const port = window.location.port;
             const wsProtocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
-            const wsUrl = `${wsProtocol}${hostname}:${port}`;
+            const wsUrl = `${wsProtocol}${hostname}:${port}/ws`;
     
             this.socket = new WebSocket(wsUrl);
             this.socket.addEventListener('open', (event: any) => {

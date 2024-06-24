@@ -1,4 +1,5 @@
 {
+    "productionMode": false,
     "useHTTPS": false,
     "SSLPrivateKeyPath": "certs/diamondvee.com.key.txt",
     "SSLCertificatePath": "certs/diamondvee.com.certificate.pem"
