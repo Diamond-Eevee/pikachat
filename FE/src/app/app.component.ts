@@ -25,7 +25,7 @@ export class AppComponent {
     this.http.post('/api/exh', {
 
     }).subscribe(() => {
-      this.router.navigate(['/chat']);
+      // this.router.navigate(['/chat']);
     });            
 
     this.gdprService.showGDPR();
