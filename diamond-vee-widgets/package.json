@@ -1,5 +1,5 @@
 {
-  "name": "widgets",
+  "name": "diamond-widgets",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,6 @@
   },
   "devDependencies": {
     "typescript": "^5.2.2",
-    "vite": "^5.3.1",
-    "vite-plugin-dts": "^3.9.1"
+    "vite": "^5.3.1"
   }
 }

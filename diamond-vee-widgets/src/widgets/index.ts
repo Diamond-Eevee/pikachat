@@ -1,0 +1,1 @@
+export * from './diamond-vee-chat/diamond-vee-chat';
